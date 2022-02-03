@@ -1,0 +1,33 @@
+.card {
+        height: 300px;
+        position: relative;
+        cursor: pointer;
+        
+  
+    &:hover .back-card {
+         display: block;
+    }
+    .back-card {
+        width: 200px;
+        height: 300px;
+        color: whitesmoke;
+        background-color: rgba(5, 5, 5, 0.616);
+        position: absolute;
+        display: none;
+        overflow-y: scroll;
+      }
+
+      .back-card::-webkit-scrollbar {
+          width: 5px;
+      }
+    }
+    img {
+        width: 200px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    a, .back-card, .card {
+        border-radius: 20px;
+    }
