@@ -40,6 +40,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./style/main.scss"; //scss generale -- Bootsrap
+@import "./style/general.scss"; //scss generale -- Bootsrap
 </style>
 

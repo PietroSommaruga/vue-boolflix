@@ -23,5 +23,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+main {
+  min-height: 1000px;
+  height: 100%;
+  background: rgb(0, 0, 0);
+}
 </style>
