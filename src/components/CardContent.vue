@@ -23,7 +23,7 @@
 export default {
   data() {
     return {
-      languages: ["en", "it", "de", "fr", "us"]
+      languages: ["en", "it", "de", "fr"]
     }
   },
   props: {
