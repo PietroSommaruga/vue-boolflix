@@ -2,7 +2,7 @@
   <main>
     <div class="container py-4">
       <div class="d-flex flex-wrap">
-        <div class="m-2" v-for="movie in moviesProp" :key="movie.id">
+        <div class="m-2" v-for="movie in filterAll" :key="movie.id">
           <card-content :card="movie" />
         </div>
       </div>
@@ -17,14 +17,14 @@ export default {
     CardContent
     },
   props: {
-    moviesProp: Array,
+    filterAll: Array,
   },
 };
 </script>
 
 <style lang="scss" scoped>
 main {
-  min-height: 1000px;
+  min-height: 100vh;
   height: 100%;
   background: rgb(0, 0, 0);
 }

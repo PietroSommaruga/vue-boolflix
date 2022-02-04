@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <header-section @search="searchMovie" />
-    <main-component :moviesProp="getMovies" />
+    <header-section @search="searchAll" />
+    <main-component :filterAll="filterAll" />
   </div>
 </template>
 
@@ -17,29 +17,36 @@ export default {
     },
   data() {
     return {
-      getMovies: [],
+      filterAll: [],
     };
   },
   methods: {
-    searchMovie(keyWord) {
-      if (keyWord === "") {
-        this.getMovies = [];
-      } else {
+    searchAll(keyWord) {
+      
         axios
           .get(
             `https://api.themoviedb.org/3/search/movie?&query=${keyWord}&api_key=9a08180013f02b9f6ba384978c7e712b&language=it`
             
           )
           .then((response) => {
-            this.getMovies = response.data.results;
+            this.filterAll = response.data.results;
+          });
+      
+        axios
+          .get(
+            `https://api.themoviedb.org/3/search/tv?&query=${keyWord}&api_key=9a08180013f02b9f6ba384978c7e712b&language=it`
+            
+          )
+          .then((response) => {
+            this.filterAll = response.data.results;
           });
       }
+
+
     },
-  },
 };
 </script>
 
 <style lang="scss">
 @import "./style/general.scss"; //scss generale -- Bootsrap
 </style>
-
