@@ -2,6 +2,7 @@
         height: 300px;
         position: relative;
         cursor: pointer;
+        background-color: rgba(255, 255, 255, 0);
         
   
     &:hover .back-card {
@@ -15,6 +16,7 @@
         position: absolute;
         display: none;
         overflow-y: scroll;
+        border-radius: 20px;
       }
 
       .back-card::-webkit-scrollbar {
@@ -38,6 +40,6 @@
         border-radius: 20px;
     }
 
-    a, .back-card, .card {
-        border-radius: 20px;
+    a, .card {
+        border-radius: 51%;
     }
