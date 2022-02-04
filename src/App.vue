@@ -21,13 +21,13 @@ export default {
     };
   },
   methods: {
-    searchMovie(movieName) {
-      if (movieName === "") {
+    searchMovie(keyWord) {
+      if (keyWord === "") {
         this.getMovies = [];
       } else {
         axios
           .get(
-            `https://api.themoviedb.org/3/search/movie?&query=${movieName}&api_key=9a08180013f02b9f6ba384978c7e712b&language=it`
+            `https://api.themoviedb.org/3/search/movie?&query=${keyWord}&api_key=9a08180013f02b9f6ba384978c7e712b&language=it`
             
           )
           .then((response) => {
