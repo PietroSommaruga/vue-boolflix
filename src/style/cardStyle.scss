@@ -1,21 +1,24 @@
 .card {
-        height: 300px;
+        height: 310px;
         position: relative;
         cursor: pointer;
         background-color: rgba(255, 255, 255, 0);
-        
+        transition: 0,5s;
+        &:hover {
+            transform: translateY(-50px);
+        }
   
     &:hover .back-card {
          display: block;
     }
     .back-card {
-        width: 200px;
-        height: 300px;
+        width: 220px;
+        height: 100%;
         color: whitesmoke;
         background-color: rgba(5, 5, 5, 0.616);
         position: absolute;
         display: none;
-        overflow-y: scroll;
+        overflow-y: auto;
         border-radius: 20px;
       }
 
@@ -34,8 +37,8 @@
         }
     }
     img {
-        width: 200px;
-        height: 300px;
+        width: 220px;
+        height: 100%;
         object-fit: cover;
         border-radius: 20px;
     }
@@ -43,3 +46,10 @@
     a, .card {
         border-radius: 51%;
     }
+
+.vote {
+    display: flex;
+    i {
+        color: rgba(251, 255, 8, 0.781);
+    }
+}

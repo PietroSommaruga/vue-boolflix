@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <header-section @search="searchAll" />
-    <main-component :filterAll="filterAll" />
+    <main-component :filterAll="filterAll"/>
+    
   </div>
 </template>
 

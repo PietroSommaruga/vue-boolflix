@@ -1,8 +1,8 @@
 <template>
   <main>
     <div class="container py-4">
-      <div class="d-flex flex-wrap">
-        <div class="m-2" v-for="movie in filterAll" :key="movie.id">
+      <div class="card-container d-flex flex-wrap justify-content-center">
+        <div class="mt-2" v-for="movie in filterAll" :key="movie.id">
           <card-content :card="movie" />
         </div>
       </div>
@@ -27,5 +27,9 @@ main {
   min-height: 100vh;
   height: 100%;
   background: rgb(0, 0, 0);
+
+  h4 {
+    color: #fff;
+  }
 }
 </style>
