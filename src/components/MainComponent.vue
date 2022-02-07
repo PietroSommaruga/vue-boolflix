@@ -1,7 +1,7 @@
 <template>
   <main>
     <div class="container py-4">
-      <div class="card-container d-flex flex-wrap justify-content-center">
+      <div class="card-container d-flex flex-wrap justify-content-center mt-4">
         <div class="mt-2" v-for="movie in filterAll" :key="movie.id">
           <card-content :card="movie" />
         </div>
@@ -24,7 +24,7 @@ export default {
 
 <style lang="scss" scoped>
 main {
-  min-height: 100vh;
+  min-height: calc(100vh - 100px);
   height: 100%;
   background: rgb(0, 0, 0);
 
